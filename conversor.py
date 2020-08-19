@@ -14,4 +14,4 @@ def conversor_mp3():
         audio = AudioFileClip("./converter/" + i)
         audio.write_audiofile("./convertidos/" + i.rstrip('.mp4') + '.mp3')
         remove('./converter/' + i)
-
+        
