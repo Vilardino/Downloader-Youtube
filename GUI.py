@@ -6,12 +6,10 @@ from tkinter import *
 
 
 def submeter():
-    button_lista["state"] = DISABLED
     button_mp3["state"] = DISABLED
     button1["state"] = DISABLED
-    download(link.get(), mp3.get(), lista.get())
+    download(link.get(), mp3.get())
     button1["state"] = NORMAL
-    button_lista["state"] = NORMAL
     button_mp3["state"] = NORMAL
 
 
@@ -46,10 +44,6 @@ left_frame.grid_propagate(0)
 mp3 = BooleanVar(False)
 button_mp3 = Checkbutton(left_frame, text="mp3", variable=mp3, font='Times 15', onvalue=True, offvalue=False)
 button_mp3.grid(row=1, column=0, padx=7, pady=7, columnspan=2)
-
-lista = BooleanVar(False)
-button_lista = Checkbutton(left_frame, text="lista", variable=lista, font='Times 15', onvalue=True, offvalue=False)
-button_lista.grid(row=1, column=2, padx=7, pady=7, columnspan=2)
 
 # log
 log_show = ScrolledText(left_frame, undo=True, width=45, height=15)

@@ -9,10 +9,11 @@ def gen_html(html):
     driver.maximize_window()
     driver.get(html)
     # identify elements with tagname <a>
-    conta = 1
+    conta =1
+
     try:
         links = open('links.txt', 'w')
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "wc-endpoint")))
+        WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, "wc-endpoint")))
         lnks = driver.find_elements_by_tag_name("a")
 
         for lnk in lnks:
