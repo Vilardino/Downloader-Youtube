@@ -33,7 +33,7 @@ right_frame.grid(row=0, column=1, padx=7, pady=7)
 # Cria Link
 
 Label(left_frame, text="Link", font='Times 15').grid(row=0, column=0, padx=5, pady=5)
-link = StringVar("")
+link = StringVar(value='')
 e_link = Entry(left_frame, width=55, textvariable=link) \
     .grid(row=0, column=1, padx=7, pady=7, columnspan=3, ipady=5)
 
@@ -41,7 +41,7 @@ e_link = Entry(left_frame, width=55, textvariable=link) \
 left_frame.grid_propagate(0)
 
 # Botoes de checagem para mp3 e lista
-mp3 = BooleanVar(False)
+mp3 = BooleanVar(value=False)
 button_mp3 = Checkbutton(left_frame, text="mp3", variable=mp3, font='Times 15', onvalue=True, offvalue=False)
 button_mp3.grid(row=1, column=0, padx=7, pady=7, columnspan=2)
 
