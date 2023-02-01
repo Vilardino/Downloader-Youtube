@@ -9,12 +9,8 @@
 - requests
 - tkinter
 - functools
-- pytube3
+- pytube
 - os
 - moviepy.editor 
 - selenium
 
-#### Bibliotecas necessárias:
-Modifeque extract.py
-
-```parse_qs(formats[i]["cipher"]) for i, data in enumerate(formats)``` -> ```parse_qs(formats[i]["signatureCipher"]) for i, data in enumerate(formats)```
